@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap carousel</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-md pt-5 pb-5">
+        <h1>Katja Maria Photography</h1>
+
+        <!-- Jumbotron look-a-like (jumbotrons are not supported in Bootstrap 5) -->
+
+        <div class="mt-5 p-3 border border-info rounded-3">
+            <h2 class="text-info">Accessibility info</h2>
+            <p>Carousel is being set not to change the slides automatically. Slideshow can be controlled manually with
+                arrow keys left and right on top of the photos or by starting and stopping the slideshow with Play and Pause.</p>
+        </div>
+
+
+        <!-- Main content -->
+
+        <div class="row pt-5">
+            <div class="col-md-6 pb-5 pe-5">
+
+                <h2 class="pb-2">Playing with light</h2>
+                <p>Opening the door and walking outside. Being temporarely unable to see because of the sun
+                    light
+                    flooding my eyes. Then starting to see details and more details. Something in between not
+                    seeing and
+                    seeing perfectly fascinates me. It is more of a feeling, than an everyday moment.
+                    <br><br>
+                    This is what I'm going after with my photography: the intuitive moment, where what is before
+                    the
+                    eyes is not as
+                    important as the feeling, that the light and the details wake in me.
+                </p>
+
+                <p><br>To start a slideshow, you can push Play and pause it when you like.</p>
+
+
+                <button type="button" class="btn btn-secondary"
+                    onclick="bootstrap.Carousel.getOrCreateInstance(document.querySelector('#demo')).cycle()">Play</button>
+
+
+                <button type="button" class="btn btn-secondary"
+                    onclick="bootstrap.Carousel.getOrCreateInstance(document.querySelector('#demo')).pause()">Pause</button>
+
+            </div>
+       
+        <div class="col-md-6">
+            <!-- Carousel -->
+            <div id="demo" class="carousel carousel-fade slide" data-bs-ride="false">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="images/PwL_Luft.jpg"
+                            alt="Air, blue skies, green treetops, sun shining from upper right corner."
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/PwL_Karussell.jpg"
+                            alt="Multiple exposure of a carousel with a sleigh, dark background, turquoise details, lights."
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/PwL_Gloeckchen.jpg"
+                            alt="A window from inside, many different kinds of glass bells hanging in front of it."
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Images/PwL_Whitespace.jpg"
+                            alt="Whitespace. White-blue skies, a tree with bare branches and in the distance a parkhouse and a church tower."
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Images/PwL_Pusteblumen.jpg"
+                            alt="Overdue flowers appearing like lluffy balls. Sun shining into the camera."
+                            class="d-block w-100">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
